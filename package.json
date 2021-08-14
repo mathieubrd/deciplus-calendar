@@ -14,6 +14,7 @@
     "@aws-cdk/assert": "1.118.0",
     "@types/jest": "^26.0.10",
     "@types/node": "10.17.27",
+    "@types/node-fetch": "^2.5.12",
     "aws-cdk": "1.118.0",
     "jest": "^26.4.2",
     "ts-jest": "^26.2.0",
@@ -23,6 +24,7 @@
   "dependencies": {
     "@aws-cdk/aws-lambda-nodejs": "^1.118.0",
     "@aws-cdk/core": "1.118.0",
+    "node-fetch": "^2.6.1",
     "source-map-support": "^0.5.16"
   }
 }
