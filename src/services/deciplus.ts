@@ -5,7 +5,7 @@ export type DeciplusSession = {
 	token: string
 }
 
-type DeciplusSignInResponse = {
+export type DeciplusSignInResponse = {
 	tokens: {
 		clubs: {
 			[key: string]: [{
@@ -15,16 +15,16 @@ type DeciplusSignInResponse = {
 	}
 }
 
-type DeciplusBookingsResponse = {
-	bookings: [{
+export type DeciplusBookingsResponse = {
+	bookings: Array<{
 		booking: {
 			startDate: string
 			activity: {
 				name: string
 			}
 		}
-	}]
-} 
+	}>
+}
 
 const baseUrl = 'https://api.deciplus.pro/deciplus-members/v1'
 const baseUrlMembers = 'https://api.deciplus.pro/members/v1'
@@ -49,7 +49,7 @@ const request = async <T>({ url, method, session, body }: RequestParameters): Pr
 	})
 
 	if (response.status !== 200) {
-		throw new Error(await response.json())
+		throw new Error('')
 	}
 
 	return await response.json() as T 
