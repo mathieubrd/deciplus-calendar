@@ -18,17 +18,6 @@ const dummySignInResponse: DeciplusSignInResponse = {
 	}
 }
 
-const dummyBookings: Booking[] = [
-	{
-		activity: 'WOD1',
-		date: new Date()
-	},
-	{
-		activity: 'WOD2',
-		date: new Date()
-	}
-]
-
 const dummyBookingsResponse: DeciplusBookingsResponse = {
 	bookings: [
 		{
@@ -49,6 +38,13 @@ const dummyBookingsResponse: DeciplusBookingsResponse = {
 		}
 	]
 }
+
+const dummyBookings: Booking[] = dummyBookingsResponse.bookings.map(({booking}) => {
+	return {
+		activity: booking.activity.name,
+		date: new Date(booking.startDate)
+	}
+})
 
 const dummySession: DeciplusSession = {
 	token: dummyToken
