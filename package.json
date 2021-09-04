@@ -1,8 +1,8 @@
 {
-  "name": "deciplus-calendar",
+  "name": "deciplus-notifier",
   "version": "0.1.0",
   "bin": {
-    "deciplus-calendar": "bin/deciplus-calendar.js"
+    "deciplus-notifier": "bin/deciplus-notifier.js"
   },
   "scripts": {
     "build": "tsc",

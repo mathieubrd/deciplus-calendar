@@ -1,4 +1,4 @@
-name: deciplus-calendar
+name: deciplus-notifier
 
 on:
   push:

@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { DeciplusCalendarStack } from '../lib/deciplus-calendar-stack';
+import { DeciplusNotifierStack } from '../lib/deciplus-notifier-stack';
 
 const app = new cdk.App();
-new DeciplusCalendarStack(app, 'DeciplusCalendarStack', {
+new DeciplusNotifierStack(app, 'DeciplusNotifierStack', {
   stackName: process.env.STACK_NAME
   /* If you don't specify 'env', this stack will be environment-agnostic.
    * Account/Region-dependent features and context lookups will not work,
